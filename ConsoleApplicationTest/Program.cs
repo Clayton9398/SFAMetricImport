@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApplicationTest
@@ -13,8 +14,9 @@ namespace ConsoleApplicationTest
         {
             //Code goes here!
 
-            Console.WriteLine("Hello!");
-            
+            Console.WriteLine("Writing Information now...");
+
+
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\");
 
             foreach (System.IO.FileInfo file in dir.GetFiles("*.JSON"))
@@ -22,6 +24,10 @@ namespace ConsoleApplicationTest
                 Console.WriteLine("{0}, {1}", file.Name, file.Length);
 
                 StreamReader streamReader = file.OpenText();
+
+                StreamWriter streamWriter = new StreamWriter(file.FullName.Replace(".json", ".csv"));
+                streamWriter.WriteLine("Date,Count");
+
                 //Console.WriteLine(streamReader.ReadLine());
                 //Console.WriteLine(streamReader.ReadToEnd());
 
@@ -35,23 +41,24 @@ namespace ConsoleApplicationTest
                     if (readLine.Contains("_id"))
                     {
 
-                       readLine = readLine.Replace("_id", "");
-                       readLine = readLine.Replace(" ","");
-                       readLine = readLine.Replace("\"\":", "");
-                        
-                       Console.Write(readLine);
+                        readLine = readLine.Replace("_id", "");
+                        readLine = readLine.Replace(" ", "");
+                        readLine = readLine.Replace("\"\":", "");
+
+                        Console.Write(readLine);
+                        streamWriter.Write(readLine);
                     }
-                    
-                    
+
                     if (readLine.Contains("count"))
                     {
-                       readLine = readLine.Replace("00", "");
-                       readLine = readLine.Replace(".", "");
-                       readLine = readLine.Replace("count", "");
-                       readLine = readLine.Replace(" ", "");
-                       readLine = readLine.Replace("\"\":", "");
-                        
-                       Console.WriteLine(readLine);
+                        readLine = readLine.Replace("00", "");
+                        readLine = readLine.Replace(".", "");
+                        readLine = readLine.Replace("count", "");
+                        readLine = readLine.Replace(" ", "");
+                        readLine = readLine.Replace("\"\":", "");
+
+                        Console.WriteLine(readLine);
+                        streamWriter.WriteLine(readLine);
                     }
 
                     //readLine = readLine.Replace("{", "Was a curly brace!");
@@ -62,6 +69,10 @@ namespace ConsoleApplicationTest
 
                     //Console.WriteLine(readLine);
                 }
+
+                //Completes writing to the file and flushes
+                streamWriter.Flush();
+                streamWriter.Close();
             }
 
             Console.WriteLine("Press any key to exit");
