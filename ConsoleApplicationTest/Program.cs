@@ -16,7 +16,7 @@ namespace ConsoleApplicationTest
             
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\");
 
-            foreach (System.IO.FileInfo file in dir.GetFiles("*.*"))
+            foreach (System.IO.FileInfo file in dir.GetFiles("*.JSON"))
             {
                 Console.WriteLine("{0}, {1}", file.Name, file.Length);
             }
