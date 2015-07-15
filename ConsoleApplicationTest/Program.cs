@@ -32,13 +32,25 @@ namespace ConsoleApplicationTest
                     //Console.WriteLine("A Line " + i);
                     string readLine = streamReader.ReadLine();
 
+                    if (readLine.Contains("_id"))
+                    {
+                        Console.WriteLine(readLine);
+                    }
+                    if (readLine.Contains("count"))
+                    {
+                       readLine = readLine.Replace("00", "");
+                       readLine = readLine.Replace(".", "");
+                        
+                        Console.WriteLine(readLine);
+                    }
+
                     //readLine = readLine.Replace("{", "Was a curly brace!");
                     //readLine = readLine.Replace(".0000000000000000", "");
-                    readLine = readLine.Replace("00", "");
-                    readLine = readLine.Replace(".", "");
+                    //readLine = readLine.Replace("00", "");
+                    //readLine = readLine.Replace(".", "");
                     //readLine = "A line";
 
-                    Console.WriteLine(readLine);
+                    //Console.WriteLine(readLine);
                 }
             }
 
