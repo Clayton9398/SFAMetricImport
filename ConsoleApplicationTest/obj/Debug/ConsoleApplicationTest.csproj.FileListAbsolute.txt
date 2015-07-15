@@ -1,2 +1,8 @@
 c:\users\tomclayton\documents\visual studio 2013\Projects\ConsoleApplicationTest\ConsoleApplicationTest\bin\Debug\ConsoleApplicationTest.exe.config
 c:\users\tomclayton\documents\visual studio 2013\Projects\ConsoleApplicationTest\ConsoleApplicationTest\obj\Debug\ConsoleApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\bin\Debug\ConsoleApplicationTest.exe.config
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\bin\Debug\ConsoleApplicationTest.exe
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\bin\Debug\ConsoleApplicationTest.pdb
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\obj\Debug\ConsoleApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\obj\Debug\ConsoleApplicationTest.exe
+C:\Users\tomclayton\Documents\GitHub\SFAMetricImport\ConsoleApplicationTest\obj\Debug\ConsoleApplicationTest.pdb
