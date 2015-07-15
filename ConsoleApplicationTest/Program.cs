@@ -34,14 +34,24 @@ namespace ConsoleApplicationTest
 
                     if (readLine.Contains("_id"))
                     {
-                        Console.WriteLine(readLine);
+
+                       readLine = readLine.Replace("_id", "");
+                       readLine = readLine.Replace(" ","");
+                       readLine = readLine.Replace("\"\":", "");
+                        
+                       Console.Write(readLine);
                     }
+                    
+                    
                     if (readLine.Contains("count"))
                     {
                        readLine = readLine.Replace("00", "");
                        readLine = readLine.Replace(".", "");
+                       readLine = readLine.Replace("count", "");
+                       readLine = readLine.Replace(" ", "");
+                       readLine = readLine.Replace("\"\":", "");
                         
-                        Console.WriteLine(readLine);
+                       Console.WriteLine(readLine);
                     }
 
                     //readLine = readLine.Replace("{", "Was a curly brace!");
