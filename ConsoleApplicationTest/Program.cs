@@ -22,13 +22,23 @@ namespace ConsoleApplicationTest
                 Console.WriteLine("{0}, {1}", file.Name, file.Length);
 
                 StreamReader streamReader = file.OpenText();
-                Console.WriteLine(streamReader.ReadToEnd());
-
+                //Console.WriteLine(streamReader.ReadLine());
+                //Console.WriteLine(streamReader.ReadToEnd());
 
                 string line;
-                while ((line = streamReader.ReadLine()) != null)
+                //while ((line = streamReader.ReadLine()) != null)
+                for (int i = 0; i < 186; i++)
                 {
-                    DoSomethingWith(line);
+                    //Console.WriteLine("A Line " + i);
+                    string readLine = streamReader.ReadLine();
+
+                    //readLine = readLine.Replace("{", "Was a curly brace!");
+                    //readLine = readLine.Replace(".0000000000000000", "");
+                    readLine = readLine.Replace("00", "");
+                    readLine = readLine.Replace(".", "");
+                    //readLine = "A line";
+
+                    Console.WriteLine(readLine);
                 }
             }
 
@@ -38,6 +48,7 @@ namespace ConsoleApplicationTest
 
         private static void DoSomethingWith(string line)
         {
+
             //throw new NotImplementedException();
         }
     }
