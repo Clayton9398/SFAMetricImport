@@ -1,0 +1,2 @@
+c:\users\tomclayton\documents\visual studio 2013\Projects\ConsoleApplicationTest\ConsoleApplicationTest\bin\Debug\ConsoleApplicationTest.exe.config
+c:\users\tomclayton\documents\visual studio 2013\Projects\ConsoleApplicationTest\ConsoleApplicationTest\obj\Debug\ConsoleApplicationTest.csprojResolveAssemblyReference.cache
